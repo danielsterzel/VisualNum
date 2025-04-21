@@ -8,7 +8,7 @@
 Currently the project has it's own DynamicArray implemented with overloaded `<<`, `+`, `[]` operators. The `DynamicArray` type also has a constructor that uses the 
 `std::initializer_list` so we can have initialization like this:
 ```
-cpp int main(){
+int main(){
 
 DynamicArray array = {1,2,3,4};
 DynamicArray stringArray = {"Hello","World","!"};
