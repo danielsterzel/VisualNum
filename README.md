@@ -14,7 +14,9 @@ DynamicArray stringArray = {"Hello","World","!"};
 
 
 return 0;
-}```
+}
+```
+
 , along with other typical vector(or any dynamic array type)methods like: `pop`, `push_back`, `isEmpty` and etc.
 
 The visualization part of the project is yet to be implemented
