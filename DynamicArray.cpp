@@ -8,17 +8,9 @@
 template<typename Thing>
 DynamicArray<Thing>::DynamicArray():capacity(5),size(0),innerArray(new Thing[capacity]) {}
 template<typename Thing>
-DynamicArray<Thing>::DynamicArray(const int capacity_,const int size_):capacity(capacity_),size(size_),innerArray(new Thing[capacity]) {
-    for (int i =0; i < size; i++) {
-        innerArray[i] = 0;
-    }
-}
+DynamicArray<Thing>::DynamicArray(const int capacity_,const int size_):capacity(capacity_),size(size_),innerArray(new Thing[capacity]) {}
 template<typename Thing>
-DynamicArray<Thing>::DynamicArray(const int size_):capacity(size_*2),size(size_),innerArray(new Thing[capacity]) {
-    for (int i =0; i < size; i++) {
-        innerArray[i] = 0;
-    }
-}
+DynamicArray<Thing>::DynamicArray(const int size_):capacity(size_*2),size(size_),innerArray(new Thing[capacity]) {}
 template<typename Thing>
 DynamicArray<Thing>::DynamicArray(std::initializer_list<Thing> list):capacity(list.size()*2),size(list.size()),innerArray(new Thing[capacity]) {
 
@@ -161,8 +153,8 @@ DynamicArray<Thing>& DynamicArray<Thing>::operator=(const DynamicArray<Thing> &o
 // }
 
 template<typename Thing>
-Thing DynamicArray<Thing>::operator[](const int index) {
-    return this->get(index);
+Thing& DynamicArray<Thing>::operator[](const int index) {
+    return innerArray[index];
 }
 
 

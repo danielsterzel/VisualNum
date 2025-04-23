@@ -51,7 +51,7 @@ template <typename Thing> class DynamicArray {
     DynamicArray& operator+=(const DynamicArray<Thing>& obj);
     DynamicArray& operator=(const DynamicArray<Thing>& obj);
     // DynamicArray& operator-(const DynamicArray<Thing>& obj);
-    Thing operator[](int index);
+    Thing& operator[](int index);
     // ---------destructor----------
     ~DynamicArray();
 };
